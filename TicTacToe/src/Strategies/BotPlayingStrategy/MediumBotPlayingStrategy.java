@@ -1,4 +1,11 @@
 package Strategies.BotPlayingStrategy;
 
-public class MediumBotPlayingStrategy {
+import Models.Board;
+import Models.Player;
+
+public class MediumBotPlayingStrategy implements BotPlayingStrategy {
+    @Override
+    public void makeMove(Board board, Player player) {
+
+    }
 }

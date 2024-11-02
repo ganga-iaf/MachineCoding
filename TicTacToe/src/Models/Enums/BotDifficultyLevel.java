@@ -1,4 +1,7 @@
 package Models.Enums;
 
-public class BotDifficultyLevel {
+public enum BotDifficultyLevel {
+    Easy,
+    Medium,
+    Hard
 }
