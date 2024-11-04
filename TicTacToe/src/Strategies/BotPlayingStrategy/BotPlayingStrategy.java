@@ -1,8 +1,8 @@
 package Strategies.BotPlayingStrategy;
 
-import Models.Board;
-import Models.Player;
+
+import Models.*;
 
 public interface BotPlayingStrategy {
-    void makeMove(Board board, Player player);
+    Move makeMove(Board board, Player player);
 }

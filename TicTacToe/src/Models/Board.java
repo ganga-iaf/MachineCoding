@@ -1,4 +1,6 @@
 package Models;
+import Models.Enums.CellState;
+
 import java.util.*;
 public class Board {
     private int size;
@@ -29,7 +31,13 @@ public class Board {
     public List<List<Cell>> getGrid(){
         return this.grid;
     }
-
+    public void undoMove(Move move){
+        Cell cell=move.getCell();
+        int row=cell.getRow();
+        int col=cell.getCol();
+        this.grid.get(row).get(col).setCellState(CellState.Empty);
+        this.grid.get(row).get(col).setSymbol(null);
+    }
     public void display(){
         for(int i=0;i<size;i++){
             for(int j=0;j<size;j++){

@@ -25,18 +25,22 @@ public class GameController {
     }
 
     public void makeMove(Game game){
-           game.makeMove();
+        try {
+            game.makeMove();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
     }
 
     public void undoMove(Game game){
-
+           game.undoMove();
     }
 
     public GameState checkGameState(Game game){
-           return game.getGameState();
+        return game.getGameState();
     }
 
     public Player getWinner(Game game){
-          return null;
+          return game.getWinner();
     }
 }
