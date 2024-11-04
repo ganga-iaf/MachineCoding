@@ -13,7 +13,7 @@ public class Client {
         //Building Players
         List<Player> players=new ArrayList<Player>();
         players.add(new HumanPlayer(1, PlayerType.Human,"Ganga",new Symbol('X',"Red")));
-        players.add(new HumanPlayer(2, PlayerType.Human,"Adi",new Symbol('O',"Red")));
+        players.add(new BotPlayer(2, PlayerType.Human,"Bujji",new Symbol('O',"Red"),BotDifficultyLevel.Hard));
 
         List<WinningStrategy> strategies=new ArrayList<>();
         strategies.add(new RowWinningStrategy());
